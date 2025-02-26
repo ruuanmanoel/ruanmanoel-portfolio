@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text-color);
 }
 html,
 body {
@@ -32,6 +33,7 @@ header {
   background-color: #3a3e71;
   background: url(background.jpg) center bottom;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #home::before {
@@ -75,4 +77,70 @@ header {
 #home-info span {
   font-size: 18px;
   letter-spacing: 4px;
+}
+#experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#experiencias h2 {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+#cards {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  border: 1px solid white;
+  border-collapse: collapse;
+  flex: 1;
+  height: 100%;
+  padding: 30px;
+}
+.card:nth-child(2) {
+  border-inline: none;
+}
+
+.card .title {
+  display: flex;
+  gap: 10px;
+}
+.card h3 {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 4px;
+}
+.card h3::before {
+  content: "";
+  width: 100%;
+  height: 9px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--light-color);
+  z-index: -1;
+}
+.card:nth-child(2) h3::before {
+  background-color: #88ffa6;
+}
+.card:nth-child(3) h3::before {
+  background-color: #88c5ff;
+}
+
+.card-experiencia-info span {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+.description {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-style: italic;
 }
