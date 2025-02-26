@@ -1,6 +1,78 @@
 :root {
-  --primary-color: #262536;
+  --primary-color: #050408;
   --secondary-color: #3a3e71;
   --light-color: #b588ff;
   --text-color: #fff7f7;
+  font-family: "Poppins", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: var(--primary-color);
+}
+main {
+  height: 100%;
+}
+header {
+  height: 100px;
+  background-color: hsla(0, 0%, 0%, 0);
+}
+#home {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #3a3e71;
+  background: url(background.jpg) center bottom;
+  background-size: cover;
+}
+
+#home::before {
+  content: "";
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Ajuste o valor de opacidade para escurecer mais ou menos */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* A camada escura vem por trás */
+}
+
+#home-principal {
+  width: 100%;
+  height: 100%;
+}
+
+#home-info {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+}
+
+#home-info h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+#home-info span {
+  font-size: 18px;
+  letter-spacing: 4px;
 }
